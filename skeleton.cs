@@ -16,32 +16,25 @@ class Program
 
             double a = double.Parse(input);
 
-            Console.WriteLine("Give operation (+ - * /):");
+            Console.Write("Give operation (+ - * /):");
             string op = Console.ReadLine();
 
-            Console.WriteLine("Give second number:");
+            Console.Write("Give second number:");
             double b = double.Parse(Console.ReadLine());
 
-            double result = Calculate(a, b, op);
+            double result = 0;
+
+            if (operation == "+") result = a + b;
+            else if (operation == "-") result = a - b;
+            else if (operation == "*") result = a * b;
+            else if (operation == "/") result = a / b;
+            else
+            {
+                Console.WriteLine("Unknown operation!");
+                continue;
+            }
             Console.WriteLine($"Result: {result}");
         }
-    }
-
-    static double Calculate(double a, double b, string op)
-    {
-        switch (op)
-        {
-            case "+":
-                return a + b;
-            case "-":
-                return a - b;
-            case "*":
-                return a * b;
-            case "/":
-                return b != 0 ? a / b : 0;
-            default:
-                Console.WriteLine("Unknown operation!");
-                return 0;
-        }
+        Console.WriteLine("Goodbye!");
     }
 }
