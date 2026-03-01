@@ -1,19 +1,23 @@
-
-A dynamic, interactive and knowledge game developed in C#. Challenge your general knowledge while managing your lives and aiming for the highest score!
-
----
-
-## 🎮 How to Play
-1. **Launch:** Run the application via your terminal.
-2. **Questions:** The game automatically shuffles the question pool for a unique experience every time.
-3. **Lives:** You start with **3 lives** (❤️). Every wrong answer costs you one life!
-4. **Input:** Type the number of your chosen answer (1-4) and press **Enter**.
-5. **Game Over:** The game ends when you either finish all questions or run out of lives.
+### Key Challenges Tackled:
+* **Division by Zero:** Implementing logic to prevent application crashes when a user attempts to divide by zero.
+* **Input Validation:** Ensuring the program only accepts numeric values.
+* **Flow Control:** Using `switch` statements for clean, readable branching logic.
 
 ---
 
-## ✨ Features
-* **Randomized Gameplay:** Implements the **Fisher-Yates Shuffle** algorithm to ensure questions appear in a random order.
-* **Heart-Based Life System:** Adds a layer of difficulty and "Game Over" logic.
-* **Robust Input Handling:** Uses `.Trim()` and `int.TryParse()` to prevent crashes from accidental spaces or non-numeric input.
-* **Object-Oriented Design:** Structured using a dedicated `Question` class for clean and maintainable code.
+## 🚀 Technical Features
+
+### 1. Robust Arithmetic Logic
+The calculator supports:
+* **Addition (+)**
+* **Subtraction (-)**
+* **Multiplication (*)**
+* **Division (/)** with a built-in safety check.
+
+
+
+### 2. Error Handling (The Junior Edge)
+Instead of a simple `double.Parse()`, this project uses `double.TryParse()` to ensure that the application handles non-numeric characters gracefully without throwing exceptions.
+
+### 3. Loop-Based UI
+The application runs in a `while` loop, allowing the user to perform multiple calculations without restarting the program.
